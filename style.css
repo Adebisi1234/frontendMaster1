@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "HankenGrotesk";
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-family: "HankenGrotesk";
+    
+}
+
+.container {
+    display: flex;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.189);
+    width: 600px;
+    height: 390px;
+}
+
+.result {
+    border-radius: 32px;
+    background: linear-gradient(  hsl(252, 100%, 67%),hsl(241, 81%, 54%) 90%);
+    padding: 0px 30px 10px;
+    gap: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+.circle {
+    width: 100px;
+    padding: 20px;
+    background: linear-gradient(hsla(241, 72%, 46%, 1) 90%, hsla(256, 72%, 46%, 1));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+
+small, .result p, .result h5 {
+    opacity: 0.8;
+}
+
+h3, p, h2 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.summary {   
+    gap: 20px;
+    padding: 10px 30px;
+}
+
+.result, .summary {
+    display: flex;   
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-basis: 50%;
+}
+
+.react {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+}
+
+.name {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    padding: 18px 0;
+    background-color: black;
+    border-radius: 30px;
+    border: none;
+    color: white;
+}
+
+.memory {
+    background-color: rgba(255, 255, 0, 0.126);
+    color:  hsl(39, 100%, 56%);
+}
+.verbal {
+    background-color: rgba(0, 128, 0, 0.112);
+    color: hsl(166, 100%, 37%);
+}
+.reaction {
+    background-color: rgba(255, 0, 0, 0.074);
+    color: hsl(0, 100%, 67%);
+}
+.visual {
+    background-color: rgba(0, 0, 255, 0.109);
+    color: hsl(234, 85%, 45%);
+}
+.score {
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        height: fit-content;
+        flex: none;
+    }
+
+    .result p {
+        max-width: 70%;
+    }
+}
+
+button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%) 1%, hsl(241, 81%, 54%));
+}
